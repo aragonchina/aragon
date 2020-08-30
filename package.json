@@ -55,6 +55,7 @@
     "react-dom": "^16.8.6",
     "react-dropzone": "^10.1.3",
     "react-helmet": "^5.2.1",
+    "react-i18next": "^11.7.2",
     "react-spring": "^7.2.10",
     "react-use-gesture": "^5.2.4",
     "regenerator-runtime": "^0.13.3",
@@ -139,12 +140,6 @@
   "browserslist": {
     "development": ">2%, last 1 edge versions, not ie > 0, not op_mini all",
     "production": ">2%, last 1 edge versions, not ie > 0, not op_mini all"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test",
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "src/*.js": [
