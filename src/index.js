@@ -19,6 +19,8 @@ import initializeSentryIfEnabled from './sentry'
 import { HelpScoutProvider } from './components/HelpScoutBeacon/useHelpScout'
 import { ClientBlockNumberProvider } from './components/AccountModule/useClientBlockNumber'
 
+import './i18n';
+
 // Initialize Sentry as early as possible, if enabled
 initializeSentryIfEnabled()
 

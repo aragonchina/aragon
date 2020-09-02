@@ -11,6 +11,8 @@ import WelcomeAction from './WelcomeAction'
 import actionCreate from './assets/action-create.png'
 import actionOpen from './assets/action-open.png'
 
+import { useTranslation } from 'react-i18next';
+
 const Welcome = React.memo(function Welcome({
   createError,
   onBack,
@@ -21,6 +23,8 @@ const Welcome = React.memo(function Welcome({
   selectorNetworks,
 }) {
   const theme = useTheme()
+
+  const { t, i18n } = useTranslation()
 
   const selectorNetworksSorted = useMemo(() => {
     return selectorNetworks
@@ -52,20 +56,22 @@ const Welcome = React.memo(function Welcome({
         wide
       />
       <WelcomeAction
-        title="Create an organization"
+        title={t('create')}
         subtitle={<CreateSubtitle error={createError} />}
         illustration={actionCreate}
         onActivate={onCreate}
         hasError={createError[0] !== null && createError[0] !== 'no-account'}
       />
       <WelcomeAction
-        title="Open an existing organization"
+        title={t('open')}
         illustration={actionOpen}
         onActivate={onOpen}
       />
     </div>
   )
 
+
+  
   return (
     <Layout
       breakpoints={{
@@ -74,8 +80,8 @@ const Welcome = React.memo(function Welcome({
       }}
     >
       <Header
-        title="Welcome to Aragon"
-        subtitle="Create your own organization in a few minutes!"
+        title={t('welcome')}
+        subtitle={t('welcome_content')}
       />
 
       {suggestedOrgs.length > 0 ? (
@@ -94,9 +100,9 @@ const Welcome = React.memo(function Welcome({
           color: ${theme.contentSecondary};
         `}
       >
-        Do you need more information about Aragon?{' '}
-        <Link href="https://aragon.org/" external>
-          Visit our homepage
+        {t('know_more')} 
+        <Link href="https://aragonchina.xyz/" external>
+        {t('Visit')} 
         </Link>
       </p>
     </Layout>
@@ -117,6 +123,7 @@ Welcome.propTypes = {
 function CreateSubtitle({ error }) {
   const theme = useTheme()
   const [errorType, errorData] = error
+  const { t, i18n } = useTranslation()
   if (errorType === 'minimum-balance') {
     return (
       <span
@@ -130,7 +137,7 @@ function CreateSubtitle({ error }) {
       </span>
     )
   }
-  return 'Start your organization with Aragon'
+  return t('create_content')
 }
 
 CreateSubtitle.propTypes = {

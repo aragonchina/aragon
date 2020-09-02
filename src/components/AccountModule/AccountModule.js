@@ -15,6 +15,8 @@ import ConnectingScreen from './AccountModuleConnectingScreen'
 import ConnectedScreen from './AccountModuleConnectedScreen'
 import ErrorScreen from './AccountModuleErrorScreen'
 
+import { useTranslation } from 'react-i18next';
+
 const SCREENS = [
   { id: 'providers', title: 'Use account from' },
   { id: 'connecting', title: 'Use account from' },
@@ -119,6 +121,8 @@ function AccountModule() {
     setActivationError(null)
   }, [screenId])
 
+  const { t, i18n } = useTranslation();
+
   return (
     <div
       ref={buttonRef}
@@ -128,6 +132,8 @@ function AccountModule() {
         height: 100%;
       `}
     >
+      <a onClick={() => i18n.changeLanguage(i18n.language == 'en' ? 'zh' : 'en')}>{i18n.language == 'en' ? '中文' : 'EN '}</a>
+
       {screenId === 'connected' ? (
         <ButtonAccount
           connectionColor={connectionColor}
@@ -137,8 +143,8 @@ function AccountModule() {
           onClick={toggle}
         />
       ) : (
-        <ButtonConnect onClick={toggle} />
-      )}
+          <ButtonConnect onClick={toggle} />
+        )}
       <AccountModulePopover
         direction={direction}
         heading={screen.title}

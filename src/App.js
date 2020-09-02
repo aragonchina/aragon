@@ -46,8 +46,9 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  ['main', 'Ethereum Mainnet', 'https://mainnet.aragon.org/'],
-  ['rinkeby', 'Ethereum Testnet (Rinkeby)', 'https://rinkeby.aragon.org/'],
+  ['main', 'Ethereum Mainnet', '#'],
+  ['rinkeby', 'Ethereum Testnet (Rinkeby)', '#'],
+  ['xdai', 'xDai ', 'https://xdai.aragonchina.xyz/'],
 ]
 if (network.type === 'ropsten') {
   SELECTOR_NETWORKS.push([
@@ -57,7 +58,7 @@ if (network.type === 'ropsten') {
   ])
 }
 
-class App extends React.Component {
+  class App extends React.Component {
   static propTypes = {
     clientTheme: ClientThemeType.isRequired,
     routing: PropTypes.object.isRequired,
