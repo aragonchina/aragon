@@ -27,21 +27,20 @@ import {
   STATUS_TEMPLATE_SCREENS,
   STATUS_DEPLOYMENT,
 } from './create-statuses'
+import { useTranslation } from 'react-i18next'
 
 // Used during the template selection phase, since we don’t know yet what are
 // going to be the configuration steps.
-const CONFIGURE_PLACEHOLDER_SCREENS = [
-  'Claim a name',
-  'Configure template',
-  'Review information',
-]
 
 function getConfigureSteps(status, template, templateData) {
+  const { t, i18n } = useTranslation()
   if (!template || status === STATUS_SELECT_TEMPLATE) {
     return [
-      'Select template',
-      ...CONFIGURE_PLACEHOLDER_SCREENS,
-      'Launch organization',
+      t("select_template"),
+      t("claim_name"),
+      t("configure_template"),
+      t("review_information"),
+      t("launch_organization"),
     ]
   }
   return [
@@ -49,7 +48,7 @@ function getConfigureSteps(status, template, templateData) {
     ...template.screens.map(([name]) =>
       typeof name === 'function' ? name(templateData) : name
     ),
-    'Launch organization',
+    t("launch_organization"),
   ]
 }
 

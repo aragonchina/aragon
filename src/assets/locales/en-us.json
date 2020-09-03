@@ -5,5 +5,14 @@
     "Visit":"Visit our homepage",
     "create":"Create an organization",
     "create_content":"Start your organization with Aragon",
-    "open":"Open an existing organization"
+    "open":"Open an existing organization",
+    "connect":"Connect your Ethereum account",
+    "connect_content":"You need to connect your Ethereum account to create an organization",
+    "what_is_eth":"What is an Ethereum wallet?",
+    "select_template":"Select template",
+    "select_template_content":"Create your organization with our pre-configured templates",
+    "claim_name":"Claim domain",
+    "configure_template":"Configure template",
+    "review_information":"Configure template",
+    "launch_organization":"Launch organization"
 }

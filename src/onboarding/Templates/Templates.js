@@ -5,6 +5,7 @@ import Carousel from '../../components/Carousel/Carousel'
 import Header from '../Header/Header'
 import TemplateCard from './TemplateCard'
 import TemplateDetails from './TemplateDetails'
+import { useTranslation } from 'react-i18next'
 
 function Templates({ onUse, templates }) {
   const [templateDetailsOpened, setTemplateDetailsOpened] = useState(false)
@@ -33,6 +34,8 @@ function Templates({ onUse, templates }) {
 
   const selectedTemplate = templates[templateDetailsIndex]
 
+  const { t, i18n } = useTranslation()
+  
   return (
     <div
       css={`
@@ -43,8 +46,8 @@ function Templates({ onUse, templates }) {
       `}
     >
       <Header
-        title="Select template"
-        subtitle="Create your organization with our pre-configured templates"
+        title={t("select_template")}
+        subtitle={t("select_template_content")}
         bottomSpacing={3 * GU}
       />
       <div

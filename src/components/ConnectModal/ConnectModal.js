@@ -10,11 +10,13 @@ import {
   useViewport,
 } from '@aragon/ui'
 import providersImage from './assets/providers.png'
+import { useTranslation } from 'react-i18next'
 
 function ConnectModal({ account, onClose, onConnect, visible }) {
   const theme = useTheme()
   const { below } = useViewport()
   const smallMode = below('medium')
+  const { t, i18n } = useTranslation()
 
   const modalWidth = useCallback(
     ({ width }) => Math.min(55 * GU, width - 4 * GU),
@@ -52,7 +54,7 @@ function ConnectModal({ account, onClose, onConnect, visible }) {
               font-weight: 600;
             `}
           >
-            Connect your Ethereum account
+            {t('connect')}
           </h1>
           <p
             css={`
@@ -61,7 +63,7 @@ function ConnectModal({ account, onClose, onConnect, visible }) {
               color: ${theme.contentSecondary};
             `}
           >
-            You need to connect your Ethereum account to create an organization
+            {t('connect_content')}
           </p>
           <p
             css={`
@@ -71,7 +73,7 @@ function ConnectModal({ account, onClose, onConnect, visible }) {
             `}
           >
             <Link href="https://www.ethereum.org/use/#_3-what-is-a-wallet-and-which-one-should-i-use">
-              What is an Ethereum wallet?
+              {t('what_is_eth')}
             </Link>
           </p>
         </header>
