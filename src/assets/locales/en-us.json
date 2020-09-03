@@ -1,7 +1,7 @@
 {
-    "welcome":"Welcome to Aragon",
+    "welcome":"Welcome to Aragon China",
     "welcome_content":"Create your own organization in a few minutes!",
-    "know_more":"Do you need more information about Aragon?",
+    "know_more":"Do you need more information about Aragon China?",
     "Visit":"Visit our homepage",
     "create":"Create an organization",
     "create_content":"Start your organization with Aragon",
@@ -14,5 +14,7 @@
     "claim_name":"Claim domain",
     "configure_template":"Configure template",
     "review_information":"Configure template",
-    "launch_organization":"Launch organization"
+    "launch_organization":"Launch organization",
+    "dandelion_name":"Dandelion",
+    "dandelion_content":"Facilitate collaboration with an organization that makes it easy for contributors to simply part ways when disagreements occur."
 }

@@ -1,10 +1,10 @@
 {
-    "welcome":"欢迎来到阿拉贡",
+    "welcome":"欢迎来到Aragon China",
     "welcome_content":"几分钟内就可以创建您自己的组织!",
-    "know_more":"了解更多阿拉贡相关信息，",
+    "know_more":"了解更多Aragon China相关信息，",
     "Visit":"点击主页",
     "create":"创建组织",
-    "create_content":"使用阿拉贡创建您的组织",
+    "create_content":"使用Aragon创建您的组织",
     "open":"打开组织",
     "connect":"连接以太坊钱包",
     "connect_content":"先连接以太坊钱包，再创建组织",
@@ -14,5 +14,7 @@
     "claim_name":"取名",
     "configure_template":"配置模板",
     "review_information":"检查",
-    "launch_organization":"启动组织"
+    "launch_organization":"启动组织",
+    "dandelion_name":"蒲公英",
+    "dandelion_content":"促进与组织间的合作，当出现分歧时，贡献者可以方便地分隔开与其意见不同的贡献者"
 }
