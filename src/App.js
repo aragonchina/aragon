@@ -46,17 +46,17 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  ['main', 'Ethereum Mainnet', '#'],
-  ['rinkeby', 'Ethereum Testnet (Rinkeby)', '#'],
+  ['main', 'Ethereum Mainnet', 'https://main.aragonchina.xyz/'],
+  ['rinkeby', 'Ethereum Testnet (Rinkeby)', 'https://rinkeby.aragonchina.xyz/'],
   ['xdai', 'xDai ', 'https://xdai.aragonchina.xyz/'],
 ]
-if (network.type === 'ropsten') {
-  SELECTOR_NETWORKS.push([
-    'ropsten',
-    'Ethereum Testnet (Ropsten)',
-    'https://aragon.ropsten.aragonpm.com/',
-  ])
-}
+// if (network.type === 'ropsten') {
+//   SELECTOR_NETWORKS.push([
+//     'ropsten',
+//     'Ethereum Testnet (Ropsten)',
+//     'https://aragon.ropsten.aragonpm.com/',
+//   ])
+// }
 
   class App extends React.Component {
   static propTypes = {
