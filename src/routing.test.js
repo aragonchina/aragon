@@ -271,7 +271,7 @@ describe('parsePreferences()', () => {
       data: {},
     })
   })
-
+// 
   test('ignores other search keys', () => {
     expect(parsePreferences('?preferences=/network&otherKey=invalid')).toEqual({
       section: 'network',
