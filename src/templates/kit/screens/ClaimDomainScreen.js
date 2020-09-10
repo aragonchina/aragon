@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Info, GU, Link } from '@aragon/ui'
+import { useTranslation } from 'react-i18next'
 import {
   useCheckDomain,
   DOMAIN_CHECK,
@@ -16,6 +17,7 @@ function ClaimDomainScreen({
   const screenData = (dataKey ? data[dataKey] : data) || {}
   const nextScreen = screens[screenIndex + 1]
 
+  const { t, i18n } = useTranslation()
   const [domain, setDomain] = useState(screenData.domain || '')
   const [displayError, setDisplayError] = useState(false)
   const domainCheckStatus = useCheckDomain(domain, true)
@@ -42,14 +44,13 @@ function ClaimDomainScreen({
       ref.focus()
     }
   }, [])
-
   return (
     <form>
-      <Header title={screenTitle} />
+      <Header title={t('claim_domain_name')} />
 
       <DomainField
         ref={handleDomainFieldRef}
-        label="Organization’s name"
+        label={t('claim_domain_label')}
         onChange={handleDomainChange}
         value={domain}
         status={domainCheckStatus}
@@ -72,11 +73,7 @@ function ClaimDomainScreen({
           margin-bottom: ${3 * GU}px;
         `}
       >
-        Aragon uses the{' '}
-        <Link href="https://ens.domains/">Ethereum Name Service (ENS)</Link> to
-        assign names to organizations. The name you choose will be mapped to
-        your organization’s Ethereum address and cannot be changed after you
-        launch your organization.
+        {t('claim_domain_remark')}
       </Info>
 
       <Navigation

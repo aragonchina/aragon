@@ -48,13 +48,10 @@ function adjustDotVotingSettings(dvSupport, dvQuorum) {
 
 export default {
   id: 'open-enterprise-template.aragonpm.eth',
-  name: 'Open Enterprise',
+  name: 'open_enterprise_name',
   header,
   icon,
-  description: `
-    A suite of apps for organizations, including project management,
-    bounties, budget planning and rewards.
-  `,
+  description: `open_enterprise_content`,
   userGuideUrl: 'https://autark.gitbook.io/open-enterprise/',
   sourceCodeUrl: 'https://github.com/AutarkLabs/open-enterprise',
   registry: 'aragonpm.eth',

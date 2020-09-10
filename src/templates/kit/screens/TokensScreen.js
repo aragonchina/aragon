@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import { useTranslation } from 'react-i18next'
 import {
   Button,
   EthIdenticon,
@@ -69,6 +70,8 @@ function Tokens({
   screenProps: { back, data, next, screenIndex, screens },
   title,
 }) {
+  const { t, i18n } = useTranslation()
+
   const screenData = (dataKey ? data[dataKey] : data) || {}
 
   const theme = useTheme()
@@ -341,11 +344,7 @@ function Tokens({
           margin-bottom: ${3 * GU}px;
         `}
       >
-        These settings will determine the name and symbol of the token that will
-        be created for your organization.
-        {editMembers
-          ? ' Add members to define the initial distribution of this token.'
-          : ''}
+        {t('token_screen_remark')}
       </Info>
 
       <Navigation

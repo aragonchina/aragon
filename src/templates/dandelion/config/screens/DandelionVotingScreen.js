@@ -1,6 +1,7 @@
 import React, { useCallback, useReducer, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { GU, Help, Info } from '@aragon/ui'
+import { useTranslation } from 'react-i18next'
 import {
   Header,
   PercentageField,
@@ -101,6 +102,7 @@ function DandelionVotingScreen({
 
   const supportRef = useRef()
   const quorumRef = useRef()
+  const { t, i18n } = useTranslation()
 
   const handleSupportRef = useCallback(ref => {
     supportRef.current = ref
@@ -166,20 +168,17 @@ function DandelionVotingScreen({
       `}
     >
       <Header
-        title="Configure template"
-        subtitle="Choose your Voting app settings below."
+        title={t('configure_template')}
+        subtitle={t('configure_template_label')}
       />
 
       <PercentageField
         ref={handleSupportRef}
         label={
           <React.Fragment>
-            Support %
+            SUPPORT %
             <Help hint="What is Support?">
-              <strong>Support</strong> is the relative percentage of tokens that
-              are required to vote “Yes” for a proposal to be approved. For
-              example, if “Support” is set to 50%, then more than 50% of the
-              tokens used to vote on a proposal must vote “Yes” for it to pass.
+              {t('configure_template_support_content')}
             </Help>
           </React.Fragment>
         }
@@ -193,11 +192,7 @@ function DandelionVotingScreen({
           <React.Fragment>
             Minimum approval %
             <Help hint="What is Minimum Approval?">
-              <strong>Minimum Approval</strong> is the percentage of the total
-              token supply that is required to vote “Yes” on a proposal before
-              it can be approved. For example, if the “Minimum Approval” is set
-              to 20%, then more than 20% of the outstanding token supply must
-              vote “Yes” on a proposal for it to pass.
+              {t('configure_template_minimum_approval_content')}
             </Help>
           </React.Fragment>
         }
@@ -212,10 +207,7 @@ function DandelionVotingScreen({
           <React.Fragment>
             Vote duration
             <Help hint="What is Vote Duration?">
-              <strong>Vote Duration</strong> is the length of time that the vote
-              will be open for participation. For example, if the Vote Duration
-              is set to 24 hours, then tokenholders have 24 hours to participate
-              in the vote.`
+              {t('configure_template_vote_duration_content')}
             </Help>
           </React.Fragment>
         }
@@ -227,9 +219,7 @@ function DandelionVotingScreen({
           <React.Fragment>
             Vote buffer
             <Help hint="What is Vote Buffer?">
-              <strong>Vote Buffer</strong> is the minimum amount of time
-              separating the start time of each new vote, as votes are processed
-              in the sequence they were created.
+              {t('configure_template_vote_buffer_content')}
             </Help>
           </React.Fragment>
         }
@@ -241,8 +231,7 @@ function DandelionVotingScreen({
           <React.Fragment>
             Vote delay
             <Help hint="What is Vote Delay?">
-              <strong>Vote Delay</strong> is the period of time an approved vote
-              must wait before being executed.
+              {t('configure_template_vote_delay_content')}
             </Help>
           </React.Fragment>
         }
@@ -264,9 +253,7 @@ function DandelionVotingScreen({
           margin-bottom: ${3 * GU}px;
         `}
       >
-        The support and minimum approval thresholds are strict requirements,
-        such that votes will only pass if they achieve approval percentages
-        greater than these thresholds.
+        {t('configure_template_remark')}
       </Info>
 
       <Navigation

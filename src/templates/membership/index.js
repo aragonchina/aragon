@@ -37,13 +37,10 @@ function adjustVotingSettings(support, quorum) {
 
 export default {
   id: 'membership-template.aragonpm.eth',
-  name: 'Membership',
+  name: 'membership_name',
   header,
   icon,
-  description: `
-    Use a non-transferable token to represent membership. Decisions are
-    made based on one-member-one-vote governance.
-  `,
+  description: `membership_content`,
   userGuideUrl:
     'https://help.aragon.org/article/34-create-a-new-membership-organization',
   sourceCodeUrl:

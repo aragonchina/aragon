@@ -37,13 +37,10 @@ function adjustVotingSettings(support, quorum) {
 
 export default {
   id: 'reputation-template.aragonpm.eth',
-  name: 'Reputation',
+  name: 'reputation_name',
   header,
   icon,
-  description: `
-    Use non-transferable tokens to represent reputation. Decisions are made
-    using reputation-weighted voting.
-  `,
+  description: `reputation_content`,
   userGuideUrl:
     'https://help.aragon.org/article/32-create-a-new-reputation-organization',
   sourceCodeUrl:

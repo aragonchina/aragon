@@ -18,8 +18,12 @@ import { TEMPLATE_LOADING, TEMPLATE_UNAVAILABLE } from '../symbols'
 import { stripUrlProtocol, sanitizeCodeRepositoryUrl } from '../../url-utils'
 import AppIcon from '../../components/AppIcon/AppIcon'
 import KnownAppBadge from '../../templates/kit/KnownAppBadge'
+import { useTranslation } from 'react-i18next';
+
 
 function TemplateDetails({ template, visible, onUse, onClose }) {
+  const { t, i18n } = useTranslation()
+
   const theme = useTheme()
   const { above, below, width } = useViewport()
   const [templateOptionalApps, setTemplateOptionalApps] = useState({})
@@ -95,7 +99,7 @@ function TemplateDetails({ template, visible, onUse, onClose }) {
                 padding: ${3 * GU}px 0 ${2 * GU}px;
               `}
             >
-              {template.name}
+              {t(template.name)}
               {(template.disabled || template.new || template.beta) && (
                 <Tag
                   mode="new"
@@ -107,8 +111,8 @@ function TemplateDetails({ template, visible, onUse, onClose }) {
                   {template.disabled
                     ? 'Coming soon'
                     : template.beta
-                    ? 'Beta'
-                    : 'New'}
+                      ? 'Beta'
+                      : 'New'}
                 </Tag>
               )}
             </h1>
@@ -118,7 +122,8 @@ function TemplateDetails({ template, visible, onUse, onClose }) {
                 color: ${theme.contentSecondary};
               `}
             >
-              {template.longdesc || template.description}
+              {/* {template.longdesc || t(template.description)} */}
+              {t(template.description)}
             </p>
             <div
               css={`
@@ -282,8 +287,8 @@ function SelectTemplateButton({ onClick, template }) {
   const label = templateUnavailable
     ? 'This template is not available at the moment'
     : templateLoading
-    ? 'Loading template…'
-    : 'Use this template'
+      ? 'Loading template…'
+      : 'Use this template'
 
   return (
     <Button

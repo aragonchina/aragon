@@ -105,7 +105,7 @@ export const networkConfigs = {
       chainId: 100,
       name: 'xDai',
       shortName: 'xdai',
-      type: 'private',
+      type: 'xdai',
       live: true,
     },
     providers: [

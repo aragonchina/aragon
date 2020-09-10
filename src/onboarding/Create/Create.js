@@ -44,7 +44,7 @@ function getConfigureSteps(status, template, templateData) {
     ]
   }
   return [
-    template.name,
+    t(template.name),
     ...template.screens.map(([name]) =>
       typeof name === 'function' ? name(templateData) : name
     ),

@@ -12,6 +12,7 @@ import {
 
 import header from './header.svg'
 import icon from './icon.svg'
+import { useTranslation } from 'react-i18next'
 
 function completeDomain(domain) {
   return domain ? `${domain}.aragonid.eth` : ''
@@ -37,13 +38,10 @@ function adjustVotingSettings(support, quorum) {
 
 export default {
   id: 'company-template.aragonpm.eth',
-  name: 'Company',
+  name: 'company_name',
   header,
   icon,
-  description: `
-    Use transferable tokens to represent ownership stake in your
-    organization. Decisions are made based on stake-weighted voting.
-  `,
+  description: `company_content`,
   userGuideUrl:
     'https://help.aragon.org/article/30-create-a-new-company-organization',
   sourceCodeUrl:
@@ -57,6 +55,7 @@ export default {
   optionalApps: [{ appName: 'agent.aragonpm.eth', label: 'Agent' }],
   screens: [
     [
+      
       data => completeDomain(data.domain) || 'Claim domain',
       props => <ClaimDomainScreen screenProps={props} />,
     ],

@@ -16,5 +16,27 @@
     "review_information":"检查",
     "launch_organization":"启动组织",
     "dandelion_name":"蒲公英",
-    "dandelion_content":"促进与组织间的合作，当出现分歧时，贡献者可以方便地分隔开与其意见不同的贡献者"
+    "dandelion_content":"促进与组织间的合作，当出现分歧时，贡献者可以方便地分隔开与其意见不同的贡献者。",
+    "company_name":"公司",
+    "company_content":"让可转让的代币表示你组织里的股权。制定决策是基于股权来投票。",
+    "fundraising_name":"资金募集",
+    "fundraising_content":"为你的组织发起一个透明且负责任的众筹活动。",
+    "open_enterprise_name":"开发企业",
+    "open_enterprise_content":"一系列供组织用的软件，包括项目管理，奖金，预算计划，报酬。",
+    "membership_name":"成员",
+    "membership_content":"用一个不可转让的代币表示成员。制定决策是基于“1员1票”的治理。",
+    "reputation_name":"名誉",
+    "reputation_content":"用不可转让的代币表示名誉。制定决策是基于名誉的分量来投票。",
+    "claim_domain_name":"取名",
+    "claim_domain_label":"组织名称",
+    "claim_domain_remark":"Aragon用Ethereum Name Service（ENS）给组织们分配名字。你选择的名字会被映射到你组织的以太坊地址，并且，这不能在你发起组织之后更改名字。",
+    "configure_template_label":"在下面选择你的投票软件的配置",
+    "configure_template_support_content":"Support,就是通过某个提案所需要的“Yes”的代币相对百分比。比如说，如果“支持”设置成50%，那么要想通过某个提案，要超过50%的代币投“Yes”这个选项。",
+    "configure_template_minimum_approval_content":"Minimum Approval,就是批准某个提案之前，对提案投“Yes”的代币占所有代币的百分比。比如，如果“最低标准”设置成20%，那么，多于20%的代币必须要投“赞成票”来通过这项提案。",
+    "configure_template_vote_duration_content":"Vote Duration,就是参与投票的时长。比如，如果把投票时长设置为24小时，那么，代币持有者有24小时的投票时间",
+    "configure_template_vote_buffer_content":"Vote Buffer,发起每个新投票的最小间隔时间，因为投票是按照其创建时间的先后顺序来处理",
+    "configure_template_vote_delay_content":"Vote Delay已通过的投票在被执行前必须要等待的时间",
+    "configure_template_remark":"支持和最低批准阀值是严格要求的，因此，只有当投票超过了阀值所定的百分比时，投票才能通过。",
+    "token_screen_remark":"这些设置决定了给你组织所创建的代币的名字和符号。添加成员来定义这个代币的初始分配。"
+
 }

@@ -2,8 +2,11 @@ import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { Card, Tag, textStyle, GU, Button, useTheme } from '@aragon/ui'
 import { OrgTemplateType } from '../../prop-types'
+import { useTranslation } from 'react-i18next';
 
 function TemplateCard({ onOpen, template }) {
+  const { t, i18n } = useTranslation()
+
   const theme = useTheme()
   const handleDetailsClick = useCallback(() => {
     onOpen(template.id)
@@ -50,7 +53,7 @@ function TemplateCard({ onOpen, template }) {
                 ${textStyle('body1')};
               `}
             >
-              <span>{template.name}</span>
+              <span>{t(template.name)}</span>
               {(template.disabled || template.new || template.beta) && (
                 <Tag
                   mode="new"
@@ -73,7 +76,7 @@ function TemplateCard({ onOpen, template }) {
                 color: ${theme.surfaceContentSecondary};
               `}
             >
-              {template.description}
+              {t(template.description)}
             </p>
           </div>
         </div>
