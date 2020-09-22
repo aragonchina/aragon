@@ -101,7 +101,7 @@ const Welcome = React.memo(function Welcome({
         `}
       >
         {t('know_more')} 
-        <Link href="https://aragonchina.xyz/" external>
+        <Link href="https://aragonchina.org/" external>
         {t('Visit')} 
         </Link>
       </p>
