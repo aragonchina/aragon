@@ -26,19 +26,19 @@ function WalletContextProvider({ children }) {
 
   useEffect(() => {
     let cancel = false
-
+    
     if (!ethereum) {
       return
     }
-
+    
     const walletWeb3 = getWeb3(ethereum)
     setWalletWeb3(walletWeb3)
-
     walletWeb3.eth.net
-      .getNetworkType()
-      .then(networkType => {
+    .getNetworkType()
+    .then(networkType => {
+      console.log(networkType)
         if (!cancel) {
-          setNetworkType(networkType)
+          setNetworkType(networkType=="private"?"xdai":networkType)
         }
         return null
       })

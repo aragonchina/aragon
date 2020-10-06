@@ -105,7 +105,7 @@ export const networkConfigs = {
       chainId: 100,
       name: 'xDai',
       shortName: 'xdai',
-      type: 'xdai',
+      type: 'xdai',// as returned by web3.eth.net.getNetworkType()
       live: true,
     },
     providers: [
