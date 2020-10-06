@@ -46,9 +46,9 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  ['main', 'Ethereum Mainnet', 'https://mainnet.aragonchina.org/'],
-  ['rinkeby', 'Ethereum Testnet (Rinkeby)', 'https://rinkeby.aragonchina.org/'],
-  ['xdai', 'xDai ', 'https://xdai.aragonchina.org/'],
+  ['main', 'Ethereum Mainnet', 'https://mainnet.aragonchina.xyz/'],
+  ['rinkeby', 'Ethereum Testnet (Rinkeby)', 'https://rinkeby.aragonchina.xyz/'],
+  ['xdai', 'xDai ', 'https://xdai.aragonchina.xyz/'],
 ]
 // if (network.type === 'ropsten') {
 //   SELECTOR_NETWORKS.push([
